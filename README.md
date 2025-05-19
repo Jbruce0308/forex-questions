@@ -26,7 +26,7 @@ Using these metrics, I clustered currencies into behavioral groups like:
 
 > This helps differentiate currencies that are erratic versus stable, and those that fluctuate within narrow or wide long-term ranges.
 
-## Bonus: Daily Report Automation
+## Bonus: Daily Report Automation (still needs testing)
 
 To automate reporting, I created an AWS Lambda function that:
 1. Runs the momentum query from Question 1
