@@ -25,3 +25,12 @@ Using these metrics, I clustered currencies into behavioral groups like:
 - `moderate`
 
 > This helps differentiate currencies that are erratic versus stable, and those that fluctuate within narrow or wide long-term ranges.
+
+## Bonus: Daily Report Automation
+
+To automate reporting, I created an AWS Lambda function that:
+1. Runs the momentum query from Question 1
+2. Joins the result with the **previous day's ranks** (retrieved from S3)
+3. Outputs a clean CSV file to an S3 bucket daily
+
+The report includes today's ranks and a `prev_day_rank` column for easy tracking of day-over-day changes. This function would be set to run daily using amazon eventbridge on a cron schedule.
